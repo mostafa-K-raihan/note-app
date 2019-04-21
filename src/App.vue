@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button @click="addNote">Click Me</button>
+    <Note v-for="note in noteCounter" :key="note"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Note from './components/Note.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Note
+  },
+  data() {
+    return{
+      noteCounter : 0,
+    }
+  },
+  methods:{
+    addNote() {
+      this.noteCounter ++;
+    }
   }
 }
 </script>
