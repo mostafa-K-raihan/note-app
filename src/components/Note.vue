@@ -1,6 +1,6 @@
 <template>
     <div class="note-container">
-        <div class="note-clicker">
+        <div class="note-clicker" contenteditable="true" role="textbox">
             Take a note...
         </div>
         
@@ -39,6 +39,10 @@ export default {
     font-size: 1.2em;
     padding : 12px 16px;
     letter-spacing: .00625em; 
+}
+
+.note-clicker:hover {
+    cursor: auto;
 }
 </style>
 
