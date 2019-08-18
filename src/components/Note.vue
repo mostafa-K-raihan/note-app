@@ -12,9 +12,9 @@
             <div class="dots-caps"></div>
             <div class="dots" ></div>
         </div>
-        <h1>{{note.title}}</h1>
-        <h5>{{note.time}}</h5>
-        <div>{{note.content}}</div>
+        <h1 class="no__wrap">{{note.title}}</h1>
+        <h5 class="no__wrap">{{note.time}}</h5>
+        <div class="no__wrap">{{note.content}}</div>
     </div>
 </div>
 </div>
@@ -89,6 +89,10 @@ export default {
 }
 </script>
 <style scoped>
+.no__wrap {
+    overflow: auto;
+    word-break: break-all;
+}
 .delete {
     float:right;
 }
