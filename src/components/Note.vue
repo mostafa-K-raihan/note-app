@@ -90,8 +90,19 @@ export default {
 </script>
 <style scoped>
 .no__wrap {
+    width: 100%;
     overflow: auto;
+    -ms-word-break: break-all;
     word-break: break-all;
+
+ /* Non standard for webkit */
+     word-break: break-word;
+
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    /* white-space: pre-wrap; */
 }
 .delete {
     float:right;
@@ -143,6 +154,7 @@ export default {
     min-width: 360px;
     margin: 0;
     background: #ffe;
+    border:none;
 
     color: #80868b;
     line-height:1.5rem;
